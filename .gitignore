@@ -1,0 +1,5 @@
+data/datasets_noncleaned/*.csv
+data/datasets_noncleaned/*.txt
+venv/
+__pycache__/
+*.ipynb_checkpoints

@@ -1,0 +1,7 @@
+This folder is intentionally left empty.
+
+Raw and processed datasets are too large to include in GitHub.
+Please download the datasets from the provided source and place them here:
+
+- data/raw/
+- data/processed/ (after cleaning the data)

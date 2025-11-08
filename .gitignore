@@ -1,5 +1,12 @@
+# Ignore raw and processed datasets
 data/raw/**
 data/processed/**
+
+# Virtual environment
 venv/
+
+# Python cache
 __pycache__/
+
+# Jupyter notebook checkpoints
 *.ipynb_checkpoints

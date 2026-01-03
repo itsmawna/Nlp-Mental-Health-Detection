@@ -1,0 +1,16 @@
+{
+  "addiction": 0,
+  "adhd": 1,
+  "alcoholism": 2,
+  "anxiety": 3,
+  "aspergers": 4,
+  "bipolar disorder": 5,
+  "depression": 6,
+  "normal": 7,
+  "ocd": 8,
+  "personality disorder": 9,
+  "ptsd": 10,
+  "schizophrenia": 11,
+  "stress": 12,
+  "suicidal": 13
+}

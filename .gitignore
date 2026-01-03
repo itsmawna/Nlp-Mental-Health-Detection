@@ -10,3 +10,6 @@ __pycache__/
 
 # Jupyter notebook checkpoints
 *.ipynb_checkpoints
+
+#models
+models/roberta_export/

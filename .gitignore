@@ -13,3 +13,64 @@ __pycache__/
 
 #models
 models/roberta_export/
+models/bert_export/
+models/svm_export/
+
+# ======================
+# Python
+# ======================
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+
+# ======================
+# Virtual environments
+# ======================
+venv/
+.env/
+.venv/
+
+# ======================
+# Jupyter
+# ======================
+.ipynb_checkpoints/
+
+# ======================
+# Models & ML artifacts
+# ======================
+models/
+*.pt
+*.bin
+*.safetensors
+*.joblib
+*.onnx
+*.pkl
+*.npy
+
+# ======================
+# Logs & outputs
+# ======================
+logs/
+*.log
+*.tmp
+
+# ======================
+# Images / plots
+# ======================
+*.png
+*.jpg
+*.jpeg
+*.svg
+
+# ======================
+# OS
+# ======================
+.DS_Store
+Thumbs.db
+
+# ======================
+# IDE
+# ======================
+.vscode/
+.idea/

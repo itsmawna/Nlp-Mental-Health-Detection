@@ -74,7 +74,7 @@ Le problème est formulé comme une tâche de **classification multi-classes** c
 Les modèles ont été évalués à l’aide de métriques adaptées aux jeux de données déséquilibrés :  
 **Accuracy**, **F1-score Macro** et **F1-score Weighted**.
 
-### 🔢 Résultats globaux
+###  Résultats globaux
 
 | Modèle                   | Accuracy | F1-score (Macro) | F1-score (Weighted) |
 |--------------------------|----------|------------------|---------------------|
@@ -82,7 +82,7 @@ Les modèles ont été évalués à l’aide de métriques adaptées aux jeux de
 | BERT                    | 0.8176   | 0.8429           | 0.8185              |
 | RoBERTa                 | 0.8100   | 0.8400           | 0.8100              |
 
-### 🔍 Analyse
+###  Analyse
 
 - Les modèles **Transformers (BERT et RoBERTa)** surpassent largement la baseline TF-IDF + SVM  
 - **BERT obtient les meilleures performances globales**, notamment en F1-score Macro  

@@ -44,34 +44,6 @@ Le problème est formulé comme une tâche de **classification multi-classes** c
 
 ---
 
-## 📁 Structure du projet
-
-```text
-NLP-Mental-Health-Detection/
-│
-├── app/
-│   └── streamlit_compare.py        # Application Streamlit de comparaison des modèles
-│
-├── data/
-│   └── .gitkeep                    # Données exclues du dépôt (volumineuses / sensibles)
-│
-├── models/
-│   └── .gitkeep                    # Modèles entraînés exclus du dépôt
-│
-├── notebooks/
-│   ├── dataextraction_from_hugging_face.ipynb
-│   ├── data_inspection.ipynb
-│   ├── exploratory_data_analysis.ipynb
-│   ├── preprocessing.ipynb
-│   ├── preprocessing final.ipynb
-│   ├── nlp-bert.ipynb
-│   ├── roberta-mental-health.ipynb
-│   └── tf-idf-linear-svm-calibrated.ipynb
-│
-├── .gitignore
-├── requirements.txt
-└── README.md
-```
 ## Modèles implémentés
 
 ### 🔹 TF-IDF + SVM linéaire (Baseline)

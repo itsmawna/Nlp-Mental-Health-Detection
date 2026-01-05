@@ -23,7 +23,7 @@ Il ne constitue en aucun cas un outil de diagnostic médical.
 
 ---
 
-## 🧩 États de santé mentale étudiés
+## États de santé mentale étudiés
 
 Le problème est formulé comme une tâche de **classification multi-classes** couvrant 14 états :
 

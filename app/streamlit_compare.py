@@ -1,18 +1,4 @@
-# app/streamlit_compare.py
-# Polished UI: cards, CSS, progress bars, metrics, example buttons, advanced settings expander,
-# SVM label mapping, PLUS:
-# - Cleaner “hero” input section (helper text + char counter + placeholder)
-# - Predict/Clear/Random buttons on one line (form)
-# - Lighter disclaimer (short line + full text inside expander)
-# - Model status “chips” (loaded + device)
-# - Better spacing + centered max width
-# - FIX: Clear/Random works (dynamic widget key trick)
-# - FIX: works on old/new Streamlit (safe_rerun)
-# - Top-K label becomes dynamic: "Top-{k} prediction(s)"
-# - OPTION 1 APPLIED: Removed “Final decision” banner completely
-#
-# Run:
-#   python -m streamlit run app\streamlit_compare.py
+
 
 import os
 import json
@@ -24,7 +10,7 @@ import streamlit as st
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 # =========================
-# 1) Paths (EDIT IF NEEDED)
+# 1) Paths 
 # =========================
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROBERTA_DIR = os.path.join(BASE_DIR, "models", "roberta_export")
@@ -35,7 +21,7 @@ SVM_MODEL_PATH = os.path.join(SVM_DIR, "svm_calibrated_model.joblib")
 SVM_VECT_PATH  = os.path.join(SVM_DIR, "tfidf_vectorizer.joblib")
 
 MAX_LEN = 160
-MAX_CHARS = 1200  # UI limit only (not model limit)
+MAX_CHARS = 1200  
 
 # =========================
 # 2) Helpers
@@ -56,7 +42,7 @@ def load_roberta(device):
     mdl = AutoModelForSequenceClassification.from_pretrained(ROBERTA_DIR).to(device)
     mdl.eval()
     with open(os.path.join(ROBERTA_DIR, "id2label.json"), "r", encoding="utf-8") as f:
-        id2label = json.load(f)  # keys are strings "0","1",...
+        id2label = json.load(f)  
     return tok, mdl, id2label
 
 @st.cache_resource
@@ -128,7 +114,7 @@ def svm_predict_safe_proba(text, svm_model, tfidf_vec, svm_classes, top_k=3, min
     return {"label": topk[0][0], "confidence": float(top1), "top_k": topk, "margin": float(margin)}
 
 # =========================
-# 3) UI helpers (CSS, cards, bars)
+# 3) UI helpers                  
 # =========================
 def inject_css(theme="light"):
     if theme == "dark":
@@ -370,7 +356,7 @@ with st.sidebar:
             st.session_state["text_area_id"] += 1
             safe_rerun()
 
-    # Removed the "Show final decision" checkbox (since final decision is removed)
+
     show_debug_tables = st.checkbox("Show debug table", value=False)
 
 inject_css(st.session_state.ui_theme)
@@ -406,7 +392,7 @@ st.markdown(
 
 st.caption("Paste a sentence or a short social-media post. We’ll show Top-K probabilities for each model.")
 
-# Dynamic key trick
+
 text_key = f"draft_text_{st.session_state.text_area_id}"
 
 with st.form("predict_form", clear_on_submit=False):
@@ -430,7 +416,7 @@ with st.form("predict_form", clear_on_submit=False):
     with b3:
         do_random = st.form_submit_button("🎲 Random example")
 
-# Sync widget value -> draft_text
+
 st.session_state["draft_text"] = st.session_state.get(text_key, "")
 
 if do_clear:
